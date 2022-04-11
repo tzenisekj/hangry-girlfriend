@@ -1,5 +1,5 @@
 from typing import List,Dict
 
 class FeedingRepository:
-    def add(self, data) -> None:
+    def add(self, feeding) -> None:
         raise NotImplementedError

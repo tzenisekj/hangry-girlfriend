@@ -1,10 +1,10 @@
-from modules.feed.services.feed import FeedService
+from modules.feed.services.feed_impl import FeedServiceImpl
 import uuid
 from modules.models.feedings import Feedings
 from modules.db_model import db
 from modules.exceptions.negative_food_exception import NegativeFoodException
 
-feed_service = FeedService()
+feed_service = FeedServiceImpl()
 def test_add(app):
     with app.app_context():
         amount = 1

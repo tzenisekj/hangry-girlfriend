@@ -1,13 +1,13 @@
 from modules.db_model import db
-from sqlalchemy import Column, String, Integer, DateTime
+from sqlalchemy import Column, String, INTEGER, DateTime
 from sqlalchemy.sql import func
 from typing import Dict
 
 class Feedings(db.Model):
-    __tablename__ = "sample"
-    Id = db.Column(Integer(), primary_key=True)
+    __tablename__ = "feedings"
+    Id = db.Column(INTEGER(), primary_key=True)
     Feeding = db.Column(DateTime(timezone=True), server_default=func.now())
-    Amount = db.Column(Integer(), nullable = False)
+    Amount = db.Column(INTEGER(), nullable = False)
 
     def serialize(self) -> Dict:
         vals = self.__dict__

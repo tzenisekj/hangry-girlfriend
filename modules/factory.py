@@ -10,6 +10,8 @@ def create_app(app_name, config_name):
     CORS(app)
     init_db(app)
     register_blueprints(app)
+    with app.app_context():
+        app.db.create_all()
     return app
 
 def register_blueprints(app):
@@ -20,3 +22,4 @@ def register_blueprints(app):
 def init_db(app):
     db.init_app(app)
     app.db = db
+    # from modules.models.feedings import Feedings

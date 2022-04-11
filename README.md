@@ -1,4 +1,4 @@
-# Hungry Girlfriend Application
+# Hangry Girlfriend Application
 
 I have a girlfriend who happens to get very hangry when not fed. I keep forgetting when I last fed her, and more importantly, when I need to feed her next. I have a one-time script called feed-girlfriend.sh that triggers when I feed my girlfriend, and I have written a script called monitor-hunger.sh that will send a POST request to `http://localhost:8000/monitor` every 5 seconds and warn me when her status changes to "Hungry", but I can't seem to figure out the business logic for determining when she will be hungry.
 

@@ -1,0 +1,5 @@
+Flask
+flask_cors==3.0.8
+pytest==5.4.3
+flask-sqlalchemy==2.5.1
+psycopg2==2.9.1

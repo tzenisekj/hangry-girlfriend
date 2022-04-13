@@ -1,6 +1,6 @@
 while true
 do
-    res=$(curl --silent localhost:8000/feed | jq .status)
+    res=$(curl --silent localhost:8000/monitor | jq .status)
     # res=$(curl --silent -X POST -d '{"amount": 1}' -H 'Content-Type:application/json' localhost:8000/feed | jq .status)
     echo "$res"
     if [ $res == "Hungry" ]
